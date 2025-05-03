@@ -1,4 +1,4 @@
-let posts = []
+let posts = [{ id: 1, title: 'Teste', content: 'lorem inpsum...', createAt: new Date(), updateAt: new Date() }]
 
 // Post { id, title, content, createAt, updatedAt }
 
@@ -23,7 +23,7 @@ const postModel = {
     },
 
     savePost(post) {
-        posts.push(post)
+        posts.unshift(post)
     },
 
     updatePost(id, updatePost) {
