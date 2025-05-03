@@ -27,7 +27,7 @@ const adminController = {
     edit: (req, res) => {
         const id = req.params.id
 
-        const post = postModel.getPostByID(id)
+        const post = postModel.getPostById(id)
 
         res.render('editPostForm', { post })
     },

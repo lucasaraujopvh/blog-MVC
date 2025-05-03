@@ -1,21 +1,21 @@
 const postModel = require("../models/postModel")
 
-const postsController = {
-    // GET /
-    index: (req, res) => {
-        const posts = postModel.getAllPosts()
-        
-        res.render('index', { posts })
-    },
+const postsController = { 
+  // GET /
+  index: (req, res) => {
+    const posts = postModel.getAllPosts()
 
-    // GET /posts/:id
-    show: (req, res) => {
-        const id = req.params.id
+    res.render('index', { posts })
+  },
 
-        const post = postModel.getPostByID(id)
+  // GET /posts/:id
+  show: (req, res) => {
+    const id = req.params.id
 
-        res.render('post', { post })
-    }
+    const post = postModel.getPostById(id)
+
+    res.render('post', { post })
+  }
 }
 
 module.exports = postsController
